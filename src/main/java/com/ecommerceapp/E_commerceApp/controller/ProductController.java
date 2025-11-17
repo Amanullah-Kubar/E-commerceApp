@@ -13,7 +13,7 @@ import java.util.List;
 
 
 @RestController
-@CrossOrigin(origins = "http://localhost:5173")
+@CrossOrigin(origins = "https://e-commerce-app-eight-kappa.vercel.app/")
 @RequestMapping(path = "/api")
 public class ProductController {
 
