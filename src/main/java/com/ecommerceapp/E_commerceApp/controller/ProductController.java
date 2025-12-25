@@ -2,7 +2,6 @@ package com.ecommerceapp.E_commerceApp.controller;
 
 import com.ecommerceapp.E_commerceApp.model.Product;
 import com.ecommerceapp.E_commerceApp.services.ProductServices;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
@@ -17,12 +16,15 @@ import java.util.List;
 @RequestMapping(path = "/api")
 public class ProductController {
 
-    @Autowired
-    private ProductServices services;
+    private final ProductServices services;
+
+    public ProductController(ProductServices services) {
+        this.services = services;
+    }
 
     @GetMapping("/")
     public String greeting() {
-        return "Prooduct List";
+        return "Nothing at this route";
     }
 
     @GetMapping("/products")
